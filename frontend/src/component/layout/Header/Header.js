@@ -71,7 +71,7 @@ const Header = () => {
                   data-mdb-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Shop
+                  Catagory
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li>
