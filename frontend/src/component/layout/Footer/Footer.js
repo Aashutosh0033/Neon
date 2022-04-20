@@ -6,60 +6,60 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer class="bg-dark text-center text-light">
+    <footer className="bg-dark text-center text-light">
       {/* <!-- Grid container --> */}
-      <div class="container p-4">
+      <div className="container p-4">
         {/* <!-- Section: Social media --> */}
-        <section class="">
+        <section className="">
           {/* <!-- Facebook --> */}
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
-          ></a>
+          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          ><i className="fab fa-facebook-f"></i
+          ></Link>
 
           {/* <!-- Twitter --> */}
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter"></i
-          ></a>
+          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          ><i className="fab fa-twitter"></i
+          ></Link>
 
           {/* <!-- Google --> */}
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google"></i
-          ></a>
+          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          ><i className="fab fa-google"></i
+          ></Link>
 
           {/* <!-- Instagram --> */}
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram"></i
-          ></a>
+          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          ><i className="fab fa-instagram"></i
+          ></Link>
 
           {/* <!-- Linkedin --> */}
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
-          ></a>
+          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          ><i className="fab fa-linkedin-in"></i
+          ></Link>
 
           {/* <!-- Github --> */}
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github"></i
-          ></a>
+          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          ><i className="fab fa-github"></i
+          ></Link>
         </section>
         {/* <!-- Section: Social media --> */}
       </div>
       <form action="/" className="container newsletter-form d-flex flex-wrap">
         <div>
-          <p class="pt-2">
+          <p className="pt-2">
             <strong>Sign up for our newsletter</strong>
           </p>
         </div>
-        <div class="form-outline form-white">
-          <input type="email" id="typeEmail" class="form-control email-input" />
-          <label class="form-label email-label text-light" for="typeEmail">Email address</label>
+        <div className="form-outline form-white">
+          <input type="email" id="typeEmail" className="form-control email-input" />
+          <label className="form-label email-label text-light" for="typeEmail">Email address</label>
         </div>
         <div>
-          <button type="submit" class="btn btn-outline-light">Subscribe</button>
+          <button type="submit" className="btn btn-outline-light">Subscribe</button>
         </div>
       </form>
 
       {/* <!-- Section: Text --> */}
-      <section class="container mb-4">
+      <section className="container mb-4">
         <p className="text-muted">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
           repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
@@ -69,67 +69,67 @@ const Footer = () => {
       {/* <!-- Section: Text --> */}
 
       {/* <!-- Section: Links --> */}
-      <section class="">
+      <section className="">
         {/* <!--Grid row--> */}
-        <div class="row container">
+        <div className="row container">
           {/* <!--Grid column--> */}
-          <div class="col-md-4">
-            <h5 class="text-uppercase">Products</h5>
+          <div className="col-md-4">
+            <h5 className="text-uppercase">Products</h5>
 
-            <ul class="list-unstyled">
+            <ul className="list-unstyled">
               <li>
-                <a href="#!" class="text-muted">T-shirts</a>
+                <Link to="/" className="text-muted">T-shirts</Link>
               </li>
               <li>
-                <a href="#!" class="text-muted">Trousers</a>
+                <Link to="/" className="text-muted">Trousers</Link>
               </li>
               <li>
-                <a href="#!" class="text-muted">Caps</a>
+                <Link to="/" className="text-muted">Caps</Link>
               </li>
             </ul>
           </div>
           {/* <!--Grid column--> */}
 
           {/* <!--Grid column--> */}
-          <div class="col-md-4">
-            <h5 class="text-uppercase">For customers</h5>
+          <div className="col-md-4">
+            <h5 className="text-uppercase">For customers</h5>
 
-            <ul class="list-unstyled mb-0">
+            <ul className="list-unstyled mb-0">
               <li>
-                <a href="#!" class="text-muted">Your Account</a>
+                <Link to="/" className="text-muted">Your Account</Link>
               </li>
               <li>
-                <a href="#!" class="text-muted">Shipping rates and policy</a>
+                <Link to="/" className="text-muted">Shipping rates and policy</Link>
               </li>
               <li>
-                <a href="#!" class="text-muted">Refunds and Replacements</a>
+                <Link to="/" className="text-muted">Refunds and Replacements</Link>
               </li>
               <li>
-                <a href="#!" class="text-muted">Delivery info</a>
+                <Link to="/" className="text-muted">Delivery info</Link>
               </li>
             </ul>
           </div>
           {/* <!--Grid column--> */}
 
           {/* <!--Grid column--> */}
-          <div class="col-md-4">
-            <h5 class="text-uppercase">Company</h5>
+          <div className="col-md-4">
+            <h5 className="text-uppercase">Company</h5>
 
-            <ul class="list-unstyled mb-0">
+            <ul className="list-unstyled mb-0">
               <li>
-                <a href="#!" class="text-muted">About Us</a>
+                <Link to="/" className="text-muted">About Us</Link>
               </li>
               <li>
-                <a href="#!" class="text-muted">Contacts</a>
+                <Link to="/" className="text-muted">Contacts</Link>
               </li>
               <li>
-                <a href="#!" class="text-muted">Careers</a>
+                <Link to="/" className="text-muted">Careers</Link>
               </li>
               <li>
-                <a href="#!" class="text-muted">Affiliates</a>
+                <Link to="/" className="text-muted">Affiliates</Link>
               </li>
               <li>
-                <a href="#!" class="text-muted">Support</a>
+                <Link to="/" className="text-muted">Support</Link>
               </li>
             </ul>
           </div>
@@ -141,13 +141,12 @@ const Footer = () => {
       {/* <!-- Section: Links --> */}
 
       {/* <!-- Copyright --> */}
-      <div class="text-center copyright p-3">
+      <div className="text-center copyright p-3">
         © {new Date().getFullYear()} Copyright:
-        <a class="text-white" href="#"> NEON.com</a>
+        <Link className="text-white" to="/"> NEON.com</Link>
       </div>
       {/* <!-- Copyright --> */}
     </footer >
-
   );
 };
 

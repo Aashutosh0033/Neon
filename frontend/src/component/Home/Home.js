@@ -7,6 +7,8 @@ import { clearErrors, getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
+import { Link } from "react-router-dom";
+import { Testimonials } from "./Testimonials";
 
 const Home = () => {
   const alert = useAlert();
@@ -29,18 +31,35 @@ const Home = () => {
         <Fragment>
           <MetaData title="NEON" />
 
-          <div className="banner">
+          {/* <div className="banner">
             <p>Welcome to Ecommerce</p>
             <h1>FIND AMAZING PRODUCTS BELOW</h1>
 
-            <a href="#container">
+            <Link href="#container">
               <button>
                 Scroll <CgMouse />
               </button>
-            </a>
-          </div>
+            </Link>
+          </div> */}
 
-          <h2 className="homeHeading">Featured Products</h2>
+          {/* <!-- Showcase --> */}
+          <section className="section-a">
+            <div className="container">
+              <div>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                  repudiandae rerum libero ipsum asperiores omnis mollitia, nostrum
+                  commodi placeat ea itaque modi corrupti corporis nam voluptas aut
+                  reprehenderit eaque culpa.
+                </p>
+                <Link to="/" className="bttn">Shop Now</Link>
+              </div>
+              <img src="https://ik.imagekit.io/onelife0033/Running-fliped.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650422250319" alt="" />
+            </div>
+          </section>
+
+          <h2 className="homeHeading">Featured Categories</h2>
 
           <div className="container" id="container">
             {products &&
@@ -48,6 +67,8 @@ const Home = () => {
                 <ProductCard key={product._id} product={product} />
               ))}
           </div>
+
+          <Testimonials/>
         </Fragment>
       )}
     </Fragment>
