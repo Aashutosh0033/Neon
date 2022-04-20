@@ -153,23 +153,19 @@
     border: 2px solid #a775f1;
   }
   
-.grid-col-span-2{
-grid-column: span 2;
-}
 
 
   /* components */
   .testimonial-grid {
-
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(4, 1fr);
+
 
     padding-block: 2rem;
     width: min(95%, 70rem);
     margin-inline: auto;
   }
-  
+
   .testimonial {
     font-size: var(--fs-400);
     padding: 2rem;
@@ -177,11 +173,21 @@ grid-column: span 2;
     box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
   }
 
-
-  .testimonial:last-child{
+  @media (min-width: 40em) {
+    .testimonial-grid{
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .testimonial:last-child{
       grid-column-start: 4;
       grid-row-start:1 ;
       grid-row-end: span 2;
+    }
+
+    .grid-col-span-2{
+      grid-column: span 2;
+      }
+      
+  
   }
   
   .testimonial.quote {
