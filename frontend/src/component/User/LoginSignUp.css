@@ -1,14 +1,22 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .LoginSignUpContainer {
-  width: 100vw;
+  margin: 0;
+  padding: 0;
+  width: 98.8vw;
   height: 100vh;
-  max-width: 100%;
+  /* max-width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(231, 231, 231);
-  position: fixed;
-  top: 0%;
-  left: 0;
+  /* position: fixed; */
+  /* top: 0%;
+  left: 0; */
 }
 
 .LoginSignUpBox {
@@ -210,3 +218,7 @@
     padding: 1.8vmax;
   }
 }
+
+/* footer{
+  display: none;
+} */

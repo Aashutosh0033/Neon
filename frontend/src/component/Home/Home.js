@@ -54,7 +54,7 @@ const Home = () => {
                   commodi placeat ea itaque modi corrupti corporis nam voluptas aut
                   reprehenderit eaque culpa.
                 </p>
-                <Link to="/products" className="bttn">Shop Now</Link>
+                <Link to="/about" className="bttn">Learn More</Link>
               </div>
               <img src="https://ik.imagekit.io/onelife0033/Running-fliped.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650422250319" alt="" />
             </div>
@@ -67,6 +67,8 @@ const Home = () => {
               products.map((product) => (
                 <ProductCard key={product._id} product={product} />
               ))}
+
+              <div className="container"><Link type="button" to="/products" className="btn btn-primary btn-rounded">Shop Now</Link></div>
           </div>
           <Partner/>
           <Testimonials/>

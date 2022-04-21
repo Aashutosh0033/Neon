@@ -81,7 +81,10 @@ function App() {
       )}
 
       <Switch>
-        <Route exact path="/" component={Home} />
+       
+          <Route exact path="/" component={Home} />
+          
+        
         <Route exact path="/product/:id" component={ProductDetails} />
         <Route exact path="/products" component={Products} />
         <Route path="/products/:keyword" component={Products} />
@@ -96,11 +99,7 @@ function App() {
 
         <ProtectedRoute exact path="/me/update" component={UpdateProfile} />
 
-        <ProtectedRoute
-          exact
-          path="/password/update"
-          component={UpdatePassword}
-        />
+        <ProtectedRoute exact path="/password/update" component={UpdatePassword} />
 
         <Route exact path="/password/forgot" component={ForgotPassword} />
 
