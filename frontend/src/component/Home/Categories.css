@@ -1,0 +1,7 @@
+.card{
+    max-width: 300px;
+}
+
+.categories-container{
+    gap: 2rem;
+}

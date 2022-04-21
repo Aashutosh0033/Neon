@@ -1,0 +1,20 @@
+.copyright{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-form{
+  gap: 1em;
+}
+
+.email-input{
+  border: 1px solid #bdbdbd !important;
+}
+
+.email-label{
+  margin-top: 1px !important;
+  background-color: #262626 !important;
+}
+
+.link:hover{
+  color:#ff6347 !important;
+}

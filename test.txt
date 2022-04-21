@@ -1,7 +1,7 @@
 1. Update Profile (does not get updated even after success)
 2. Forgot Password (Does not find our email)
 3. Payment Gateway Intergration 
-4. Register User (Does not procees after entering the details)
+4. Register User (Does not proceed after entering the details)
 5. Email Verification while registering User ✅
 6. Cart items (gets added for every user)
 7. Create Product from dashboard (does not proceed even after entering the details)
