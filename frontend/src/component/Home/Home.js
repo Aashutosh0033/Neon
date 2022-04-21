@@ -9,6 +9,8 @@ import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import { Link } from "react-router-dom";
 import { Testimonials } from "./Testimonials";
+import { Categories } from "./Categories";
+import { Partner } from "./Partner";
 
 const Home = () => {
   const alert = useAlert();
@@ -53,20 +55,22 @@ const Home = () => {
                   commodi placeat ea itaque modi corrupti corporis nam voluptas aut
                   reprehenderit eaque culpa.
                 </p>
-                <Link to="/" className="bttn">Shop Now</Link>
+                <Link to="/" className="bttn ">Shop Now</Link>
               </div>
               <img src="https://ik.imagekit.io/onelife0033/Running-fliped.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650422250319" alt="" />
             </div>
-          </section>
+            </section>
+            
+            <Categories />
+            
+            <Partner/>
 
-          <h2 className="homeHeading">Featured Categories</h2>
-
-          <div className="container" id="container">
+          {/* <div className="container" id="container">
             {products &&
               products.map((product) => (
                 <ProductCard key={product._id} product={product} />
               ))}
-          </div>
+          </div> */}
 
           <Testimonials/>
         </Fragment>

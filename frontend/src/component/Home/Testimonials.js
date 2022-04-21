@@ -6,7 +6,7 @@ export const Testimonials = () => {
         <div>
             <h2 className='homeHeading'>Testimonials</h2>
             <main className="testimonial-grid">
-                <article className="testimonial grid-col-span-2 grid-col-span-2 flow bg-primary-400 quote text-neutral-100">
+                <article className="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100">
                     <div className="flex">
                         <div>
                             <img src="https://ik.imagekit.io/onelife0033/Running-fliped.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650422250319" alt="daniel clifford" />
