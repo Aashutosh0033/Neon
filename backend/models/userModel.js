@@ -3,6 +3,8 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
 const crypto = require('crypto');
+const Joi = require("joi");
+
 
 
 const userSchema = new mongoose.Schema({
@@ -35,11 +37,11 @@ const userSchema = new mongoose.Schema({
         
             public_id : {
                 type:String,
-                required:true
+                required:false
             },
             url: {
                 type:String,
-                required: true
+                required: false
             }
         
 
@@ -56,6 +58,10 @@ const userSchema = new mongoose.Schema({
         type:Date,
         default:Date.now
     },
+    verified:{
+        type:Boolean,
+        default:false
+    }
 
     // status: {
     //     type: String, 
@@ -107,4 +113,16 @@ userSchema.methods.getResetPasswordToken = function(){
 }
 
 
+exports.validate = (user) => {
+    const schema = Joi.object({
+      name: Joi.string().min(3).max(255).required(),
+      email: Joi.string().email().required(),
+    });
+    return schema.validate(user);
+  };
+
+
+
 module.exports = mongoose.model("User", userSchema);
+
+

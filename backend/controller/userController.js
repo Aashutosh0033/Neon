@@ -2,35 +2,127 @@ const ErrorHandler = require("../utils/errorhandler");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const User = require('../models/userModel');
 const sendToken = require('../utils/jwtToken')
+const Token = require("../models/token");
 const sendEmail = require("../utils/sendEmail")
 const crypto = require("crypto");
 const { json } = require("express/lib/response");
+const validate = require('../models/userModel');
 
 
 
 
 //Register a user
-exports.registerUser = catchAsyncErrors( async (req,res,next) =>{
+exports. registerUser = catchAsyncErrors( async (req,res,next) =>{
     const {name,email,password} = req.body;
-    const user = await User.create({
-        name,
-        email,
-        password,
-        avatar:{
-            public_id:"this is a sample id",
-            url:"profilePicUrl"
 
-        }
-    });
+//Get verify email token
+    try {
+        const { error } = validate(req.body);
+        if (error) return next(new ErrorHandler(error.details[0].message,400));
+    
+        let user = await User.findOne({ email: req.body.email });
+        if (user) return next(new ErrorHandler("User with given email already exist!",400));
+          
+         user = await new User({
+            name: req.body.name,
+            email: req.body.email,
+            password : req.body.password
+          }).save();
+       
+    
+        let token = await new Token({
+          userId: user._id,
+          token: crypto.randomBytes(32).toString("hex"),
+        }).save({ validateBeforeSave : false});
+    
+        const message = `${req.protocol}://${req.get("host")}/api/v1/register/verify/${user.id}/${token.token}`;
+        
 
-    sendToken(user, 201, res);
+      
+        await sendEmail({
+            email:user.email,
+            subject:"Neon Email Verification",
+            message,
+        });
+
+            res.status(200).json({
+            success:true,
+            message: `Email sent to ${user.email} successfully`,
+
+        });
+
+   }catch(error){
+       
+
+       return next(new ErrorHandler(error.message, 500));
+
+    }
+
 });
+
+
+//VeriFy Email
+exports.verifyUserEmail = catchAsyncErrors( async (req, res, next) =>{
+
+    try {
+        const user = await User.findOne({ _id: req.params.id });
+        if (!user) return res.status(400).send("Invalid link");
+        
+        
+        const token = await Token.findOne({
+          userId: user._id,
+          token: req.params.token,
+        });
+        
+        if (!token) return res.status(400).send("Invalid link");
+    
+       
+
+
+        const newUserData = {
+            verified:true
+        }
+    
+        
+        await User.findByIdAndUpdate(req.params.id,newUserData,{
+           new:true,
+           runValidators:true,
+           useFindAndModify:false
+       });
+
+        await Token.findByIdAndRemove(token._id);
+    
+
+        
+        
+        res.status(200).json({
+            success:true,
+            message: "Email verified sucessfully",
+
+        });
+        
+
+        
+
+      }catch(error) {
+        
+          res.status(400).json({
+              success:false,
+              message: `An error occured ${error}`,
+  
+          });
+
+      }
+    
+});
+
+
 
 
 //Login user
 exports.loginUser = catchAsyncErrors (async (req,res,next)=>{
 
-    const {email, password} = req.body;
+    const {email, password, verified} = req.body;
 
     //checking if user has given password and email both
 
@@ -45,6 +137,10 @@ exports.loginUser = catchAsyncErrors (async (req,res,next)=>{
 
     }
 
+    
+
+
+
     const isPasswordMatched = await user.comparePassword(password);
 
 
@@ -53,11 +149,13 @@ exports.loginUser = catchAsyncErrors (async (req,res,next)=>{
 
     }
 
-    //Get verification email
-    // if (user.status != "Active") {
-    //     return next(new ErrorHandler("Pending Account. Please Verify Your Email!",401));
-    // }
 
+    if(verified == false){
+        return next(new ErrorHandler("Email not verified",401));
+
+    }
+
+   
 
     sendToken(user, 200, res);
 
@@ -95,7 +193,7 @@ exports.loginUser = catchAsyncErrors (async (req,res,next)=>{
     const resetToken = user.getResetPasswordToken();
     await user.save({ validateBeforeSave : false});
 
-    const resetPasswordUrl = `${process.env.FRONTEND_URL}/api/v1/password/reset/${resetToken}`
+    const resetPasswordUrl = `${req.protocol}://${req.get("host")}/api/v1/password/reset/${resetToken}`
 
     const message = `Your  password reset token is :- \n\n${resetPasswordUrl}\n\nIf you have not requested this email then please ignore it.`;
 
