@@ -64,7 +64,9 @@ const Home = () => {
           <div className="container" id="container">
             {products &&
               products.map((product) => (
-                <ProductCard key={product._id} product={product} />
+                
+              <ProductCard key={product._id} product={product} />
+                
               ))}
 
               <div className="container"><Link type="button" to="/products" className="btn btn-primary btn-rounded">Shop Now</Link></div>
@@ -79,3 +81,8 @@ const Home = () => {
 };
 
 export default Home;
+
+
+              
+                
+              

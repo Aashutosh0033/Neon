@@ -3,7 +3,9 @@
 3. Payment Gateway Intergration 
 4. Register User (Does not proceed after entering the details)
 5. Create Product from dashboard (does not proceed even after entering the details)
-6. Reviews not getting submitted throught frontend
+6. Reviews not getting submitted throught frontend.
+7. Newsletter email registration 
+
 
 
 

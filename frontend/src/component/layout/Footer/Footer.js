@@ -67,13 +67,13 @@ const Footer = () => {
           eum harum corrupti dicta, aliquam sequi voluptate quas.
         </p> */}
 
-      <img
+      {/* <img
           src="https://ik.imagekit.io/onelife0033/cover_pg_zz7Gw9jAJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1650290508700"
           height="50"
           width = "100"
           alt="NEON Logo"
           loading="lazy"
-      />
+      /> */}
       </section>
       {/* <!-- Section: Text --> */}
 
@@ -152,7 +152,7 @@ const Footer = () => {
       {/* <!-- Copyright --> */}
       <div className="text-center copyright p-3">
         © {new Date().getFullYear()} Copyright:
-        <Link className="text-white" to="/"> NEON.com</Link>
+        <Link className="text-white" to="/"> neonfit.store</Link>
       </div>
       {/* <!-- Copyright --> */}
     </footer >
