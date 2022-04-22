@@ -23,7 +23,7 @@ const Profile = ({ history }) => {
           <div className="profileContainer">
             <div>
               <h1>My Profile</h1>
-              {/* <img src={user.avatar.url} alt={user.name} /> */}
+              <img src="https://ik.imagekit.io/onelife0033/149071_ANJpxc1Oq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650606613813" alt="profile icon" />
               <Link to="/me/update">Edit Profile</Link>
             </div>
             <div>

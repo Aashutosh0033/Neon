@@ -4,3 +4,20 @@
   max-width: 100%;
   /* position: fixed; */
 }
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+
+.flex-container div{
+  width: 100%;
+  max-width: 500px;
+}
+
+.flex-container img{
+  max-width: 500px;
+}

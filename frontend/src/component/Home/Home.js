@@ -9,7 +9,8 @@ import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import { Link } from "react-router-dom";
 import { Testimonials } from "./Testimonials";
-import {Partner} from "./Partner"
+import { Partner } from "./Partner"
+import Footer from "../layout/Footer/Footer"
 
 const Home = () => {
   const alert = useAlert();
@@ -71,7 +72,8 @@ const Home = () => {
               <div className="container"><Link type="button" to="/products" className="btn btn-primary btn-rounded">Shop Now</Link></div>
           </div>
           <Partner/>
-          <Testimonials/>
+            <Testimonials />
+            <Footer />
         </Fragment>
       )}
     </Fragment>

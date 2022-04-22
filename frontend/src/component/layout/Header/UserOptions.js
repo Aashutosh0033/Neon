@@ -63,33 +63,35 @@ const UserOptions = ({ user }) => {
 
   return (
     <Fragment>
-      <Backdrop open={open} style={{ zIndex: "10" }} />
-      <SpeedDial
-        ariaLabel="SpeedDial tooltip example"
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
-        style={{ zIndex: "11" }}
-        open={open}
-        direction="down"
-        className="speedDial"
-        // icon={
-        //   <img
-        //     className="speedDialIcon"
-        //     src={user.avatar.url ? user.avatar.url : "/Profile.png"}
-        //     alt="Profile"
-        //   />
-        // }
-      >
-        {options.map((item) => (
-          <SpeedDialAction
-            key={item.name}
-            icon={item.icon}
-            tooltipTitle={item.name}
-            onClick={item.func}
-            tooltipOpen={window.innerWidth <= 600 ? true : false}
-          />
-        ))}
-      </SpeedDial>
+      <div className="speed-dial">
+        <Backdrop open={open} style={{ zIndex: "10" }} />
+        <SpeedDial
+          ariaLabel="SpeedDial tooltip example"
+          onClose={() => setOpen(false)}
+          onOpen={() => setOpen(true)}
+          style={{ zIndex: "11" }}
+          open={open}
+          direction="down"
+          className="speedDial"
+          icon={
+            <img
+              className="speedDialIcon"
+              src={"https://ik.imagekit.io/onelife0033/149071_ANJpxc1Oq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650606613813"}
+              alt="Profile"
+            />
+          }
+        >
+          {options.map((item) => (
+            <SpeedDialAction
+              key={item.name}
+              icon={item.icon}
+              tooltipTitle={item.name}
+              onClick={item.func}
+              tooltipOpen={window.innerWidth <= 600 ? true : false}
+            />
+          ))}
+        </SpeedDial>
+      </div>
     </Fragment>
   );
 };

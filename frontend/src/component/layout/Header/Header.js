@@ -138,8 +138,11 @@ const Header = () => {
                 </li>
               </ul>
             </div> */}
+
+
+            
             {/* <!-- Avatar --> */}
-            <div className="dropdown">
+            {/* <div className="dropdown">
               <Link
                 className="dropdown-toggle d-flex align-items-center hidden-arrow"
                 to="/"
@@ -170,7 +173,7 @@ const Header = () => {
                   <Link className="dropdown-item" to="/">Logout</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           {/* <!-- Right elements --> */}
         </div>
