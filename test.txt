@@ -2,15 +2,24 @@
 2. Forgot Password (Does not find our email)
 3. Payment Gateway Intergration 
 4. Register User (Does not proceed after entering the details)
-5. Email Verification while registering User ✅
-6. Cart items (gets added for every user)
-7. Create Product from dashboard (does not proceed even after entering the details)
-8. Reviews not getting submitted
-9. Quantity not showing
+5. Create Product from dashboard (does not proceed even after entering the details)
+6. Reviews not getting submitted throught frontend
 
 
+
+
+ Remaining Pages : 
+ 1. Policies
+ 2. contact us 
+ 3. Whatsapp logo (adding in the userOptions)
+ 4. cart header positioning
+ 
+ 
 
 mongodb atlas database connection username and password :  neonecommerce & neon@1234
+
+
+ImageKit : a.onelife0033@gmail.com  & Escalade@3332
 
 
 
@@ -37,15 +46,10 @@ Users:
 
 
 
-front end home page : 
-- About us
-- Video 
-- Partner
-- Whatsapp logo
 
 
 
-website current state: 
-- payment gateway not working
-- add to cart button commented
-- login and registration not working
+
+
+
+

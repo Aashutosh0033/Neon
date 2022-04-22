@@ -5,7 +5,7 @@
   padding: 4rem 0;
 }
 
-.sidebar > a:first-child {
+/* .sidebar > a:first-child {
   padding: 0;
 }
 .sidebar > a > img {
@@ -15,7 +15,8 @@
 
 .sidebar > a > img:hover {
   filter: drop-shadow(0 0 10px #3C4B78);
-}
+} */
+
 .sidebar a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.493);

@@ -32,6 +32,10 @@
   cursor: pointer;
 }
 
+.CartItemCard > div > p:hover{
+  color: tomato;
+}
+
 @media screen and (max-width: 600px) {
   .CartItemCard {
     padding: 3vmax;

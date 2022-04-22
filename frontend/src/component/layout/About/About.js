@@ -13,7 +13,7 @@ const About = () => {
         <div className="my-3 flex-container">
           <div>
             <h2>What is Neon?</h2>
-            <p>Neon is a fitness apparel brand which have come with an objective of increasing the comfort level of athletes while performing workouts. Neon is continuously focusing on creating various editions & designs but just quantity sufficient of 100 pieces. We prefer quality over quantity so we just focus on creating unique designs. Neon have decided to donate 10% of income every month for social welfare & development for human beings.
+            <p>Neon is a fitness apparel brand which have come with an objective of increasing the comfort level of athletes while performing workouts. Neon is continuously focusing on creating various editions & designs but just quantity sufficient of 100 pieces (1/100). We prefer quality over quantity so we just focus on creating unique designs. Neon have decided to donate 10% of income every month for social welfare & development for human beings.
               <br /> " We just not give comfort for our fam,  but also create unique lifestyle who wears NEON "
             </p>
           </div>

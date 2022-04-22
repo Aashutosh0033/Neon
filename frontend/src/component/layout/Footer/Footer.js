@@ -1,6 +1,5 @@
 import React from "react";
-// import playStore from "../../../images/playstore.png";
-// import appStore from "../../../images/Appstore.png";
+
 import "./Footer.css";
 import { Link } from "react-router-dom";
 
@@ -12,29 +11,34 @@ const Footer = () => {
         {/* <!-- Section: Social media --> */}
         <section className="">
           {/* <!-- Facebook --> */}
-          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          <a className="btn btn-outline-light btn-floating m-1" href="/" role="button"
           ><i className="fab fa-facebook-f"></i
-          ></Link>
+          ></a>
 
           {/* <!-- Twitter --> */}
-          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          <a className="btn btn-outline-light btn-floating m-1" to="/" role="button"
           ><i className="fab fa-twitter"></i
-          ></Link>
+          ></a>
 
           {/* <!-- Google --> */}
-          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          <a className="btn btn-outline-light btn-floating m-1" to="/" role="button"
           ><i className="fab fa-google"></i
-          ></Link>
+          ></a>
 
           {/* <!-- Instagram --> */}
-          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          <a className="btn btn-outline-light btn-floating m-1" href="https://instagram.com/_neon_fit?igshid=YmMyMTA2M2Y="  role="button"
           ><i className="fab fa-instagram"></i
-          ></Link>
+          ></a>
 
           {/* <!-- Linkedin --> */}
-          <Link className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          <a className="btn btn-outline-light btn-floating m-1" to="/" role="button"
           ><i className="fab fa-linkedin-in"></i
-          ></Link>
+          ></a>
+          <a className="btn btn-outline-light btn-floating m-1" to="/" role="button"
+          ><i className="fab fa-whatsapp"></i
+          ></a>
+
+          
 
           
         </section>

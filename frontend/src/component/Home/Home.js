@@ -48,12 +48,10 @@ const Home = () => {
           <section className="section-a">
             <div className="container">
               <div>
-                <h1>Lorem ipsum dolor sit amet.</h1>
+                <h1>This is only for Top 1%.</h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                  repudiandae rerum libero ipsum asperiores omnis mollitia, nostrum
-                  commodi placeat ea itaque modi corrupti corporis nam voluptas aut
-                  reprehenderit eaque culpa.
+                Neon is a fitness apparel brand which have come with an objective of increasing the comfort level of athletes while performing workouts. 
+                Neon is continuously focusing on creating various editions & designs but just quantity sufficient of 100 pieces (1/100). 
                 </p>
                 <Link to="/about" className="bttn">Learn More</Link>
               </div>

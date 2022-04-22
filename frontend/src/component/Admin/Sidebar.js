@@ -1,6 +1,6 @@
 import React from "react";
 import "./sidebar.css";
-import logo from "../../images/logo.png";
+import logo from "../../images/NEON_LOGO1.png";
 import { Link } from "react-router-dom";
 import { TreeView, TreeItem } from "@material-ui/lab";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -15,9 +15,11 @@ import RateReviewIcon from "@material-ui/icons/RateReview";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Link to="/">
-        <img src={logo} alt="Ecommerce" />
-      </Link>
+      {/* <Link to="/">
+        <img src="https://ik.imagekit.io/nmtrlmn4bwh/Neon_website/neon-logo.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649782575338" 
+        width="10" 
+        alt="Neon" />
+      </Link> */}
       <Link to="/admin/dashboard">
         <p>
           <DashboardIcon /> Dashboard
