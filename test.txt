@@ -3,20 +3,12 @@
 3. Payment Gateway Intergration (PayU using payment link)
 4. Register User (Does not proceed after entering the details)
 5. Create Product from dashboard (does not proceed even after entering the details)
-6. Reviews not getting submitted throught frontend.
+6. Reviews not getting submitted through frontend.
 7. Newsletter email registration 
 
 
 
 
-
-
- 
-
- 
-
- 
- 
 
 mongodb atlas database connection username and password :  neonecommerce & neon@1234
 
@@ -47,11 +39,19 @@ Running Project :
 
 1. Clone Repo form GitHub
 2. Open the project folder in vscode
-3. Open RightClick on frontend folder and choose open in integrated terminal and type : npm i 
+3. RightClick on frontend folder and choose open in integrated terminal and type : npm i 
 4. After the node modules folder is downloaded in front end do the same process for backend folder.
 5. Run this script in frontend terminal : npm start
 6. Run this script in the backend terminal : npm run dev
 &. Wait till you are redirected to your chrome browser
+
+ 
+
+ 
+
+ 
+ 
+
 
 
 

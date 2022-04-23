@@ -5,7 +5,7 @@ export const DeliveryInfo = () => {
   return (
       <div className='text-section'>
           <div className="text-container">
-              <h1 className="text-center my-3">Delivary info</h1>
+              <h1 className="text-center my-3">Delivery info</h1>
               <ul>
                   <li>
                       <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
