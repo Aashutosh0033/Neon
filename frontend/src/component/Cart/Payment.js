@@ -147,3 +147,12 @@ const Payment = ({ history }) => {
 };
 
 export default Payment;
+
+
+
+
+
+      
+          
+    
+

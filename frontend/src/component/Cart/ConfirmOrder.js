@@ -33,7 +33,7 @@ const ConfirmOrder = ({ history }) => {
 
     sessionStorage.setItem("orderInfo", JSON.stringify(data));
 
-    history.push("/process/payment");
+    history.push("");
   };
 
   return (
@@ -104,7 +104,7 @@ const ConfirmOrder = ({ history }) => {
               <span>₹{totalPrice}</span>
             </div>
 
-            <button onClick={proceedToPayment}>Proceed To Payment</button>
+            <button onSubmit={proceedToPayment}>Proceed To Payment</button>  
           </div>
         </div>
       </div>
