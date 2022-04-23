@@ -39,9 +39,12 @@ import ProcessOrder from "./component/Admin/ProcessOrder";
 import UsersList from "./component/Admin/UsersList";
 import UpdateUser from "./component/Admin/UpdateUser";
 import ProductReviews from "./component/Admin/ProductReviews";
-import Contact from "./component/layout/Contact/Contact";
+import { Contact } from "./component/layout/Contact/Contact";
 import About from "./component/layout/About/About";
 import NotFound from "./component/layout/Not Found/NotFound";
+import PrivacyPolicy from "./component/layout/PrivacyPolicy/PrivacyPolicy";
+import { Replacement } from "./component/layout/Replacement/Replacement";
+import { DeliveryInfo } from "./component/layout/DeliveryInfo/DeliveryInfo";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -94,6 +97,12 @@ function App() {
         <Route exact path="/contact" component={Contact} />
 
         <Route exact path="/about" component={About} />
+        
+        <Route exact path="/privacypolicy" component={PrivacyPolicy} />
+        
+        <Route exact path="/replacement" component={Replacement} />
+        
+        <Route exact path="/delivery" component={DeliveryInfo} />
 
         <ProtectedRoute exact path="/account" component={Profile} />
 

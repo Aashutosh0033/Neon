@@ -1,15 +1,9 @@
-import React from "react";
-import "./Contact.css";
-import { Button } from "@material-ui/core";
+import React from 'react'
+import "../PrivacyPolicy/PrivacyPolicy.css"
 
-const Contact = () => {
+export const Contact = () => {
   return (
-    <div className="contactContainer">
-      <a className="mailBtn" href="mailto:mymailforabhi@gmail.com">
-        <Button>Contact: mymailforabhi@gmail.com</Button>
-      </a>
-    </div>
-  );
-};
+    <div className='text-section'>Contact</div>
+  )
+}
 
-export default Contact;

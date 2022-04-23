@@ -108,13 +108,13 @@ const Footer = () => {
                 <Link to="/account" className="text-muted">Your Account</Link>
               </li>
               <li>
-                <Link to="/" className="text-muted">Shipping rates and policy</Link>
+                <Link to="/privacypolicy" className="text-muted">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/" className="text-muted">Refunds and Replacements</Link>
+                <Link to="/replacement" className="text-muted">Refunds and Replacements</Link>
               </li>
               <li>
-                <Link to="/" className="text-muted">Delivery info</Link>
+                <Link to="/delivery" className="text-muted">Delivery info</Link>
               </li>
             </ul>
           </div>
@@ -129,7 +129,7 @@ const Footer = () => {
                 <Link to="/about" className="text-muted">About Us</Link>
               </li>
               <li>
-                <Link to="/" className="text-muted">Contacts</Link>
+                <Link to="/contact" className="text-muted">Contacts</Link>
               </li>
               <li>
                 <Link to="/" className="text-muted">Careers</Link>

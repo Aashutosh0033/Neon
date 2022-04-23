@@ -1,0 +1,53 @@
+.text-section {
+    min-height: 100vh;
+    width: 98.8vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+    /* position: fixed; */
+}
+.text-container{
+    max-width: 900px;
+    flex-direction: column;
+}
+
+.text-container h1{
+    font-size: 2.3em;
+    color: #766e32;
+}
+.text-container h2{
+    font-size: 1.5em;
+    color: #3c4b78;
+}
+.text-container h3{
+    font-size: 1.3em;
+    color: #485a5a;
+}
+.text-container h4{
+    font-size: 1em;
+}
+.text-container h5{
+    font-size: 0.8em;
+}
+.text-container h6{
+    font-size: 0.7em;
+}
+.text-container p, li{
+    font-size: 1em;
+    color: #678181;
+}
+
+.text-container li{
+    padding: 1em;
+}
+
+.list-items li{
+    list-style-type: disc;
+    padding: 0;
+}
+
+.sub-list-items li{
+    list-style-type: circle;
+    padding: 0;
+}

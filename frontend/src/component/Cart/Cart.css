@@ -2,7 +2,7 @@
   margin: auto;
   text-align: center;
   /* padding: 10vmax; */
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,6 +28,7 @@
 .cartPage {
   padding: 5vmax;
   width: 98.8vw;
+  min-height:100vh ;
 }
 
 .cartHeader {
