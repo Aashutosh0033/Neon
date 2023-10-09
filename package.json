@@ -19,7 +19,7 @@
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "kickbox": "^2.0.4",
-    "mongoose": "^6.2.7",
+    "mongoose": "^6.11.3",
     "nodemailer": "^6.7.3",
     "stripe": "^8.217.0",
     "validator": "^13.7.0"
